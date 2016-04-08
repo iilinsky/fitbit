@@ -1,9 +1,8 @@
 #!/usr/bin/python
-#!/depot/Python-2.7.6/bin/python2.7
 
 # necessary for VNC with no X server
-import matplotlib as mpl
-mpl.use('Agg')
+#import matplotlib as mpl
+#mpl.use('Agg')
 
 import pandas as pd
 import numpy as np
@@ -25,38 +24,31 @@ for i in range(0,len(time_raw)):
 
 time_np = np.array(temp)
 
-### Plotting
-hours = mdates.HourLocator()
-minutes = mdates.MinuteLocator()
-timeFmt = mdates.DateFormatter('%I%p')
-#timeFmt = mdates.DateFormatter('%Y-%m-%d %H:%M:%S')
-
 ## DELETE ZERO ELEMENTS, NEEDS REVISITTING
-hr_raw = np.delete(hr_raw, range(72,75))
-time_np = np.delete(time_np, range(72,75))
+zeros_hr = np.where(hr_raw == 0)[0]
+hr_final = np.delete(hr_raw, zeros_hr)
+time_final = np.delete(time_np, zeros_hr)
 
+##########
+# Plotting
+##########
+# create subplots
 fig, ax = plt.subplots()
-ax.plot(time_np, hr_raw)
 
-# format ticks
-#ax.xaxis.set_major_locator(hours)
+# set x-axis tick date formatting
+timeFmt = mdates.DateFormatter('%I%p')
 ax.xaxis.set_major_formatter(timeFmt)
-#ax.xaxis.set_minor_locator(minutes)
+
+# enable grid
 ax.grid(True)
 
-#datemin = dt.date(time_np.min().hour, 1, 1)
-#datemax = dt.date(time_np.max().hour + 1, 1, 1)
-#ax.set_xlim(datemin, datemax)
+# plot
+ax.plot(time_final, hr_final)
 
 # rotates and right aligns the x labels, and moves the bottom of the
 # axes up to make room for them
 fig.autofmt_xdate()
 
-# ax.plot(time_useful, hr_raw)
-# ax.xaxis_date()
-# fig = plt.figure()
-# plt.plot(hr_raw)
-
-
+# show & save
 plt.show()
 plt.savefig("hr.png")
