@@ -1,0 +1,17 @@
+http://stackoverflow.com/questions/5498510/creating-graph-with-date-and-time-in-axis-labels-with-matplotlib
+
+http://www.randalolson.com/2014/06/28/how-to-make-beautiful-data-visualizations-in-python-with-matplotlib/
+
+https://github.com/corynissen/fitbitScraper
+
+http://blog.corynissen.com/2015/01/r-package-to-download-fitbit-data.html
+
+http://stackoverflow.com/questions/13336823/matplotlib-python-error
+
+http://stackoverflow.com/questions/12911987/how-to-change-date-format-using-matplolib-in-python
+
+http://matplotlib.org/examples/api/date_demo.html
+
+http://matplotlib.org/api/pyplot_api.html
+
+https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior
