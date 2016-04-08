@@ -12,6 +12,8 @@ http://stackoverflow.com/questions/12911987/how-to-change-date-format-using-matp
 
 http://matplotlib.org/examples/api/date_demo.html
 
+http://matplotlib.org/examples/pylab_examples/multicolored_line.html
+
 http://matplotlib.org/api/pyplot_api.html
 
 https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior
