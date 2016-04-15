@@ -14,11 +14,15 @@ http://stackoverflow.com/questions/13336823/matplotlib-python-error
 # Matplotlib API
 http://matplotlib.org/examples/api/date_demo.html
 
+<<<<<<< HEAD
 # Pyplot API
 http://matplotlib.org/api/pyplot_api.html
 
 # Convert string to datetime
 https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior
+
+# Multicolored Line (line collection)
+http://matplotlib.org/examples/pylab_examples/multicolored_line.html
 
 # Scipy Interpolation reference
 http://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html
